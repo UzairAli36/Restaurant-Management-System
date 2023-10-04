@@ -63,7 +63,6 @@ if (isset($_GET['id'])) {
 
 <!-- Service Start -->
 <div class="container-xxl py-5">
-
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-md-6">
@@ -88,7 +87,15 @@ if (isset($_GET['id'])) {
                     <input type="hidden" name="name" value="<?php echo $one->name; ?>">
                     <input type="hidden" name="image" value="<?php echo $one->image; ?>">
                     <input type="hidden" name="price" value="<?php echo $one->price; ?>">
-                    <input name="quantity" class="form-control" type="number" min="1" max="10" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin">
+                    <div class="align-items-center border-start border-5 border-primary px-3 col-md-5">
+                        <h3>Quantity:</h3>
+                        <?php if (isset($_SESSION['user_id'])) : ?>
+                            <input name="quantity" class="form-control" type="number" min="1" max="10" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin">
+                        <?php else : ?>
+                            <input name="quantity" class="form-control" type="number" min="1" max="10" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin" disabled>
+                        <?php endif; ?>
+                    </div>
+                    <br>
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <?php if ($count > 0) : ?>
                             <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2" disabled>Added to Cart</button>
@@ -103,5 +110,6 @@ if (isset($_GET['id'])) {
         </div>
     </div>
 </div>
+<!-- Service End -->
 
 <?php require "../includes/footer.php"; ?>
