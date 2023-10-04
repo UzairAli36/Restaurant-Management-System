@@ -19,7 +19,7 @@ $query = "SELECT * FROM reviews";
 $app = new APP;
 $reviews = $app->selectAll($query);
 
-$query = "SELECT * FROM employees";
+$query = "SELECT * FROM employees WHERE status = 1";
 $app = new APP;
 $employees = $app->selectAll($query)
 
@@ -281,7 +281,6 @@ $employees = $app->selectAll($query)
     </div>
 </div>
 <!-- Team End -->
-
 
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
