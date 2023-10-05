@@ -5,7 +5,11 @@
 
 $query = "SELECT * FROM employees";
 $app = new APP;
-$employees = $app->selectAll($query)
+$employees = $app->selectAll($query);
+
+$query = "SELECT * FROM reviews";
+$app = new APP;
+$reviews = $app->selectAll($query);
 
 ?>
 
@@ -103,5 +107,29 @@ $employees = $app->selectAll($query)
     </div>
 </div>
 <!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+            <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <?php foreach ($reviews as $review) : ?>
+                <div class="testimonial-item bg-transparent border rounded p-4">
+                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p><?php echo $review->review; ?></p>
+                    <div class="d-flex align-items-center">
+                        <div class="ps-3">
+                            <h5 class="mb-1"><?php echo $review->username; ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
 
 <?php require "includes/footer.php"; ?>
