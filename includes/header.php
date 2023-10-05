@@ -13,7 +13,7 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Welcome to - Top Taste Restaurant</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -57,8 +57,7 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="<?php echo APPURL; ?>" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restaurant</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>TOP TASTE</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -68,7 +67,7 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
                         <a href="<?php echo APPURL; ?>" class="nav-item nav-link active">Home</a>
                         <a href="<?php echo APPURL; ?>/menu.php" class="nav-item nav-link">Menu</a>
                         <a href="<?php echo APPURL; ?>/about.php" class="nav-item nav-link">About</a>
-                        <a href="<?php echo APPURL; ?>/service.php" class="nav-item nav-link">Service</a>
+                        <a href="<?php echo APPURL; ?>/service.php" class="nav-item nav-link">Services</a>
                         <a href="<?php echo APPURL; ?>/contact.php" class="nav-item nav-link">Contact</a>
 
                         <?php if (isset($_SESSION['username'])) : ?>
