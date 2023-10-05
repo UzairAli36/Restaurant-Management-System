@@ -23,7 +23,7 @@ $meals_3 = $app->selectAll($query);
         <h1 class="display-3 text-white mb-3 animated slideInDown">Our Menu</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center text-uppercase">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo APPURL; ?>">Home</a></li>
                 <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
             </ol>
         </nav>
